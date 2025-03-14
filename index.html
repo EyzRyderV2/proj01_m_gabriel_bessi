@@ -11,7 +11,16 @@
 <body>
     <nav>
         <h1>Bem vindo ao Projeto 01 de Gabriel Bessi</h1>
-        <ul>
+        <a href="javascript:void(0);" class="icon" onclick="hamburgur()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-align-justify">
+                <path d="M3 12h18" />
+                <path d="M3 18h18" />
+                <path d="M3 6h18" />
+            </svg>
+        </a>
+        <ul id="navLinks">
             <a href="#js01">Js01</a>
             <a href="#js02">Js02</a>
             <a href="#js03">Js03</a>
@@ -28,7 +37,17 @@
 
         <article class="welcome">
 
-            <p>desculpa tou sem criatividade pra algo legal, espero que goste o que fiz</p>
+            <div>
+                <img src="assets/he is litraly me.jpg" />
+                <div>
+
+                    <p>
+                        Ola ^v^,
+                    </p>
+                    <p>Sou Gabriel Bessi,</p>
+                    <p>pesso desculpa pois tou sem criatividade pra algo legal, espero que goste do projeto!</p>
+                </div>
+            </div>
         </article>
 
         <div class="card" id="js01">
@@ -142,7 +161,8 @@
         <article class="vidia">
             <div>
                 <div>
-                    <p>Aqui vou compartilhar um video que fiz para uma atividade de curso tecnico. </p>
+                    <p>Aqui vou compartilhar um video que fiz para uma atividade de curso tecnico so pra completar a
+                        lista de requisitos. </p>
                 </div>
                 <iframe src="https://www.youtube.com/embed/Z18bcS2qLnE" width="420" height="315" frameborder="0"
                     gesture="media" allow="encrypted-media" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -207,6 +227,16 @@
     <script src="js/js09.js"></script>
     <script src="js/js10.js"></script>
     <script src="js/audioPlayer.js">
+    </script>
+    <script>
+        function hamburgur() {
+            var x = document.getElementById("navLinks");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+        }
     </script>
 </body>
 
