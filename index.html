@@ -9,19 +9,8 @@
 </head>
 
 <body>
-    <!--
-Imagem de primeiro plano, Vídeo e Áudio (incluídos com tags de HTML5);
-Iframe (com conteúdo e/ou como ‘alvo’).
-
-Estilize a aparência geral dos elementos:
-4. Crie página(s) responsiva(s) para, no mínimo,
-    Mobile e Desktop (@media e Flexbox/Grid...).
-
--->
     <nav>
         <h1>Bem vindo ao Projeto 01 de Gabriel Bessi</h1>
-        <!-- add funny font-->
-        <!--put link for js00 and add efect, and add a switch to put it on funny mode -->
         <ul>
             <a href="#js01">Js01</a>
             <a href="#js02">Js02</a>
@@ -150,9 +139,50 @@ Estilize a aparência geral dos elementos:
         </div>
 
 
-        <iframe src="https://www.youtube.com/embed/Z18bcS2qLnE" width="420" height="315" frameborder="0" gesture="media"
-            allow="encrypted-media"  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <article class="vidia">
+            <div>
+                <div>
+                    <p>Aqui vou compartilhar um video que fiz para uma atividade de curso tecnico. </p>
+                </div>
+                <iframe src="https://www.youtube.com/embed/Z18bcS2qLnE" width="420" height="315" frameborder="0"
+                    gesture="media" allow="encrypted-media" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </article>
+        <article class="bye">
+            <img src="assets/Obrigado-pela-aten-o-w-3-14-2025.png" />
+        </article>
     </main>
+
+    <div class="audio-player">
+        <div class="icon-container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="audio-icon" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                    d="M18 3a1 1 0 00-1.196-.98l-10 2A1 1 0 006 5v9.114A4.369 4.369 0 005 14c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V7.82l8-1.6v5.894A4.37 4.37 0 0015 12c-1.657 0-3 .895-3 2s1.343 2 3 2 3-.895 3-2V3z" />
+            </svg>
+            <audio>
+                <source src="./assets/Using - Sorority Noise.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="controls">
+                <button class="player-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <input type="range" class="timeline" max="100" value="0">
+                <button class="sound-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#3D3132">
+                        <path fill-rule="evenodd"
+                            d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </div>
     <footer>
         <ul>
             <li>
@@ -166,7 +196,6 @@ Estilize a aparência geral dos elementos:
             </li>
         </ul>
     </footer>
-
     <script src="js/js01.js"></script>
     <script src="js/js02.js"></script>
     <script src="js/js03.js"></script>
@@ -177,6 +206,8 @@ Estilize a aparência geral dos elementos:
     <script src="js/js08.js"></script>
     <script src="js/js09.js"></script>
     <script src="js/js10.js"></script>
+    <script src="js/audioPlayer.js">
+    </script>
 </body>
 
 </html>

@@ -11,6 +11,7 @@ html {
 }
 
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -40,9 +41,11 @@ nav {
     background: oklch(0.554 0.046 257.417);
     padding: 16px 12px;
     color: oklch(0.984 0.003 247.858);
+    z-index: 10;
 }
 
-nav ul {
+nav ul,
+footer ul {
     list-style-type: none;
 
     width: 100%;
@@ -54,12 +57,20 @@ nav ul {
     gap: 1rem;
 }
 
-nav ul a {
+nav ul a,
+footer ul li a {
     padding: 12px 16px;
     text-decoration: none;
     background-color: white;
     border-radius: 12px;
     color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+
+nav ul a:hover,
+footer ul li a:hover {
+    background-color: lightgray;
 }
 
 h1 {
@@ -75,28 +86,9 @@ footer {
     color: oklch(0.984 0.003 247.858);
 }
 
-footer ul {
-    list-style-type: none;
-
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
 
 footer ul li {
     text-decoration: none;
-}
-
-footer ul li a {
-    padding: 12px 16px;
-    text-decoration: none;
-    background-color: white;
-    border-radius: 12px;
-    color: black;
 }
 
 button {
@@ -191,20 +183,174 @@ button:disabled {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
-#js08 #relogio{
+#js08 #relogio {
     background-color: white;
     padding: 10px 16px;
     border-radius: 10px;
 }
 
-#js05,#js08{
+#js05,
+#js08 {
     justify-content: space-around;
 
 }
 
-#js07,#js03,#js02,#js01{
+#js07,
+#js03,
+#js02,
+#js01 {
     justify-content: center;
+}
+
+.audio-player {
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    --player-button-width: 3em;
+    --sound-button-width: 2em;
+    --space: .5em;
+}
+
+.icon-container {
+    width: 100%;
+    height: 100%;
+    background-color: oklch(0.554 0.046 257.417);
+    padding: 12px;
+    border-radius: 12px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-icon {
+    width: 90%;
+    height: 90%;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.player-button {
+    background-color: transparent;
+    border: 0;
+    width: var(--player-button-width);
+    height: var(--player-button-width);
+    cursor: pointer;
+    padding: 0;
+}
+
+.timeline {
+    -webkit-appearance: none;
+    height: .5em;
+    width: calc(100% - (var(--player-button-width) + var(--sound-button-width) + var(--space)));
+    margin-right: var(--space);
+    background-color: #e5e5e5;
+    border-radius: 5px;
+    background-size: 0% 100%;
+    background-image: linear-gradient(#DE5E97, #DE5E97);
+    background-repeat: no-repeat;
+}
+
+.timeline::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .1s;
+    background-color: #a94672;
+}
+
+.timeline::-webkit-slider-thumb:hover {
+    background-color: #943f65;
+}
+
+.timeline:hover::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+.timeline::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+.sound-button {
+    background-color: transparent;
+    border: 0;
+    width: var(--sound-button-width);
+    height: var(--sound-button-width);
+    cursor: pointer;
+    padding: 0;
+}
+
+
+.bye {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("./assets/sleep-kirby.gif");
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -16px;
+}
+
+.bye img {
+    width: 100%;
+}
+
+.vidia {
+    background: oklch(0.554 0.046 257.417);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    width: 100%;
+}
+
+.vidia div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 90px;
+}
+
+.vidia div div {
+    max-width: 30rem;
+    color: white;
+}
+
+
+.vidia div div p {
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 1080px) {
+    .vidia div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
