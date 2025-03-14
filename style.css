@@ -379,9 +379,12 @@ nav>a.icon {
 
 @media only screen and (max-width: 880px) {
     nav ul {
-        display: none;
         flex-direction: column;
         height: 100vh;
+    }
+
+    nav ul#navLinks.hidden {
+        display: none;
     }
 
     nav>a.icon {
