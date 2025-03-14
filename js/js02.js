@@ -16,5 +16,5 @@ function exibirClassificacaoIMC() {
     parseFloat(document.getElementById("peso").value),
     parseFloat(document.getElementById("altura").value) / 100,
   );
-  document.getElementById("imcRes").innerText = ClassificacaoDeIMC(imc);
+  document.getElementById("imcRes").innerText = `Seu imc é ${imc.toFixed(2)}: ${ClassificacaoDeIMC(imc)}`;
 }

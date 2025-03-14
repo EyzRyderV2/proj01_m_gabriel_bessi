@@ -21,5 +21,5 @@ function exibirClassificacaoMedia(){
     parseFloat(document.getElementById("p2").value),
   ])
   console.log(notaFinal)
-  document.getElementById("NFRes").innerText=classificarMedia(notaFinal)
+  document.getElementById("NFRes").innerText = `Nua Nota Final foi ${notaFinal.toFixed(2)} que ${classificarMedia(notaFinal)}`
 }

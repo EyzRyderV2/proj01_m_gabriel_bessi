@@ -88,7 +88,7 @@
             <p>JS 04 - Lista de Nomes</p>
 
             <label for="nomes">Nomes:</label>
-            <input type="text" id="nomes" placeholder="Ex: Akihico, Shinji, Jubileu, Amungus">
+            <input type="text" id="nomes" placeholder="Ex: Kirby, Shinji, Amungus,Jubileu">
 
             <button onclick="exibirListaDeNomes()">Exibir lista</button>
             <button onclick="exibirListaDeNomesEmOrdem()">Exibir lista em Ordem Alphabetico</button>
@@ -106,10 +106,8 @@
         <div class="card" id="js06">
             <p>JS 06 - Lets Go gambling</p>
 
-            <ul>
-                <li>Tentativa 1</li>
-                <li>Tentativa 2</li>
-                <li>Tentativa 3</li>
+            <ul id="tentativasRestante">
+
             </ul>
 
             <label for="tentativa">Adivinha Numero ai 0 a 10:</label>
@@ -117,6 +115,7 @@
             <button id="confirmGamba" onclick="exibirResultadoTentativa()">Confirmar</button>
             <button id="dickaGamba" onclick="exibirDica()">Quer uma Dica</button>
             <button id="resetGamba" onclick="resetarGambling()" disabled>Resetar</button>
+            <p id="js06res"></p>
             <!--if correct put parabens de eva-->
         </div>
 
@@ -155,11 +154,9 @@
         <article class="vidia">
             <div>
                 <div>
-                    <p>Aqui vou compartilhar um video que fiz para uma atividade de curso tecnico so pra completar a
-                        lista de requisitos. </p>
+                    <p>Aqui vou compartilhar um video que fiz para uma atividade de curso tecnico so pra completar a lista de requisitos desse projeto. </p>
                 </div>
-                <iframe src="https://www.youtube.com/embed/Z18bcS2qLnE" width="420" height="315" frameborder="0"
-                  class="youtube" gesture="media" allow="encrypted-media" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.youtube.com/embed/Z18bcS2qLnE" width="420" height="315" frameborder="0" class="youtube" gesture="media" allow="encrypted-media" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </article>
         <article class="bye" id="js09">

@@ -1,4 +1,4 @@
-let tentativas = 3;
+let tentativas = 0;
 let numeroAleatorio = 0;
 let isCorrect = false
 
@@ -10,31 +10,44 @@ function genareteRandomNumber(){
 
 function exibirResultadoTentativa(){
   const tentativa = parseInt(document.getElementById("tentativa").value)
-  --tentativas;
+  ++tentativas;
+
 
   if(tentativa==numeroAleatorio) {
     isCorrect=true
     alert("assertou")
   }
+  const listHTML = document.createElement("li")
+  listHTML.classList.add(isCorrect ? "acertouu" : "errouu")
+  listHTML.innerText=`Tentativa ${tentativas}`
+  document.getElementById("tentativasRestante").append(listHTML)
 
-  if(tentativas<1 || isCorrect){
+  if(tentativas>2 || isCorrect){
     document.getElementById("confirmGamba").disabled=true
     document.getElementById("resetGamba").disabled=false
+    document.getElementById("js06res").innerHTML = `O resultado é ${numeroAleatorio} `
 
   }
 }
 
 function resetarGambling(){
-  tentativas=3;
+  tentativas=0;
   genareteRandomNumber();
   isCorrect=false;
   document.getElementById("confirmGamba").disabled=false
   document.getElementById("resetGamba").disabled=true
   document.getElementById("tentativa").value = ""
+  document.getElementById("tentativasRestante").innerHTML = ``
+  document.getElementById("js06res").innerHTML = ""
+
 }
 
-function exibirDica(){
-  tentativas <3 ?alert(tentativa<numeroAleatorio?"Menor":"Maior"):alert("Faz um chute primeiro")
+function exibirDica() {
+  if (tentativas >= 1) {
+    alert(tentativa.value < numeroAleatorio ? "Maior" : "Menor")
+  } else {
+    alert("Faz um chute primeiro")
+  }
 }
 /*
  *
