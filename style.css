@@ -391,7 +391,7 @@ nav>a.icon {
         display: flex;
     }
 
-    .welcome>div{
+    .welcome>div {
         flex-direction: column;
     }
 
