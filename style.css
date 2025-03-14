@@ -99,6 +99,26 @@ footer ul li a {
     color: black;
 }
 
+button {
+    background-color: oklch(0.372 0.044 257.287);
+    color: oklch(0.984 0.003 247.858);
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+
+button:hover {
+    background-color: oklch(0.704 0.04 256.788);
+    cursor: pointer;
+}
+
+button:disabled {
+
+    background-color: oklch(0.279 0.041 260.031);
+    cursor: not-allowed;
+}
+
 .welcome {
     position: relative;
     min-height: 100vh;
@@ -135,8 +155,12 @@ footer ul li a {
     border-radius: 12px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+}
+
+.card button {
+    margin-top: 12px;
 }
 
 .slideshow {
@@ -159,4 +183,28 @@ footer ul li a {
 
 .slideshow img.active {
     opacity: 1;
+}
+
+#js08 {
+    background-image: url("./assets/LiveWallpaperPC.com-Kirby-Sleeping.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#js08 #relogio{
+    background-color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+}
+
+#js05,#js08{
+    justify-content: space-around;
+
+}
+
+#js07,#js03,#js02,#js01{
+    justify-content: center;
 }
