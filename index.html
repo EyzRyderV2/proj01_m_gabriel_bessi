@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--
+Imagem de primeiro plano, Vídeo e Áudio (incluídos com tags de HTML5);
+Iframe (com conteúdo e/ou como ‘alvo’).
+
+Estilize a aparência geral dos elementos:
+4. Crie página(s) responsiva(s) para, no mínimo,
+    Mobile e Desktop (@media e Flexbox/Grid...).
+
+-->
+    <nav>
+        <h1>Bem vindo ao Projeto 01 de Gabriel Bessi</h1>
+        <!-- add funny font-->
+        <!--put link for js00 and add efect, and add a switch to put it on funny mode -->
+        <ul>
+            <a href="#js01">Js01</a>
+            <a href="#js02">Js02</a>
+            <a href="#js03">Js03</a>
+            <a href="#js04">Js04</a>
+            <a href="#js05">Js05</a>
+            <a href="#js06">Js06</a>
+            <a href="#js07">Js07</a>
+            <a href="#js08">Js08</a>
+            <a href="#js09">Js09</a>
+            <a href="#js10">Js10</a>
+        </ul>
+    </nav>
+    <main>
+
+        <article class="welcome">
+
+            <p>desculpa tou sem criatividade pra algo legal, espero que goste o que fiz</p>
+        </article>
+
+        <div class="card" id="js01">
+            <p>JS 01 - Calculador de Aniversário</p>
+            <label for="birthdate">Selecione a data do seu aniversário:</label>
+            <input type="date" id="birthdate">
+            <button onclick="calcularAteNiverExibir()">Calcular</button>
+            <p id="resultado"></p>
+        </div>
+
+        <div class="card" id="js02">
+            <p>JS 02 - Calculador de IMC</p>
+
+            <label for="peso">Peso:</label>
+            <input type="number" id="peso" placeholder="Ex: 69.5">
+
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" placeholder="Ex: 173">
+            <button onclick="exibirClassificacaoIMC()">Calcular</button>
+
+            <p id="imcRes"></p>
+        </div>
+
+        <div class="card" id="js03">
+            <p>JS 03 - Calculador NF</p>
+
+            <label for="p1">P1:</label>
+            <input type="number" id="p1" placeholder="Ex: 10">
+
+            <label for="p2">P2:</label>
+            <input type="number" id="p2" placeholder="Ex: 10">
+            <button onclick="exibirClassificacaoMedia()">Calcular</button>
+
+            <p id="NFRes"></p>
+        </div>
+
+        <div class="card" id="js04">
+            <p>JS 04 - Lista de Nomes</p>
+
+            <label for="nomes">Nomes:</label>
+            <input type="text" id="nomes" placeholder="Ex: Akihico, Shinji, Jubileu, Amungus">
+
+            <button onclick="exibirListaDeNomes()">Exibir lista</button>
+            <button onclick="exibirListaDeNomesEmOrdem()">Exibir lista em Ordem Alphabetico</button>
+
+
+            <ul id="listaNomesRes"></ul>
+        </div>
+
+        <div class="card" id="js05">
+            <p>JS 05 - Saudações</p>
+
+            <div id="saudacoes"></div>
+        </div>
+
+        <div class="card" id="js06">
+            <p>JS 06 - Lets Go gambling</p>
+
+            <ul>
+                <li>Tentativa 1</li>
+                <li>Tentativa 2</li>
+                <li>Tentativa 3</li>
+            </ul>
+
+            <label for="tentativa">Adivinha Numero ai 0 a 10:</label>
+            <input type="number" id="tentativa" placeholder="Ex: 00">
+            <button id="confirmGamba" onclick="exibirResultadoTentativa()">Confirmar</button>
+            <button id="dickaGamba" onclick="exibirDica()">Quer uma Dica</button>
+            <button id="resetGamba" onclick="resetarGambling()" disabled>Resetar</button>
+            <!--if correct put parabens de eva-->
+        </div>
+
+        <div class="card" id="js07">
+            <p>JS 07 - Saca os sites do pai</p>
+            <p>normalmente isso fica no footer mas pq não colocar aqui</p>
+
+            <select name="navSelect" id="navSelect">
+                <option value="" selected disabled hidden>Selecione Site</option>
+                <option value="https://bessiportfolio.vercel.app/">Portfolio</option>
+                <option value="https://github.com/EyzRyder">Github</option>
+                <option value="https://www.linkedin.com/in/gabriel-bessi-5b0160230/">Linkedin</option>
+            </select>
+        </div>
+
+        <div class="card" id="js08">
+            <p>JS 08 - Relogio</p>
+            <div id="relogio"></div>
+
+        </div>
+
+        <div class="card" id="js09">
+            <p>JS 09 - Pulso</p>
+            <img src="assets/punch.gif" id="imagem" />
+
+        </div>
+
+        <div class="card" id="js10">
+            <p>JS 10 - Carrosel</p>
+            <div class="slideshow">
+                <img src="assets/punch.gif" />
+                <img src="assets/food01.jpg"/>
+                <img src="assets/food02.jpg"/>
+                <img src="assets/food03.jpg"/>
+                <img src="assets/food04.gif"/>
+                <img src="assets/food05.webp"/>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li>
+                <a target="_blank" href="https://bessiportfolio.vercel.app/">Portfolio</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://github.com/EyzRyder">Github</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.linkedin.com/in/gabriel-bessi-5b0160230/">LinkedIn</a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="js/js01.js"></script>
+    <script src="js/js02.js"></script>
+    <script src="js/js03.js"></script>
+    <script src="js/js04.js"></script>
+    <script src="js/js05.js"></script>
+    <script src="js/js06.js"></script>
+    <script src="js/js07.js"></script>
+    <script src="js/js08.js"></script>
+    <script src="js/js09.js"></script>
+    <script src="js/js10.js"></script>
+</body>
+
+</html>
